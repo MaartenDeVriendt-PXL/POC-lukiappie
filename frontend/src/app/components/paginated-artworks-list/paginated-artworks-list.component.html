@@ -1,0 +1,19 @@
+<div>
+  <h2 style="text-align: center;">Gepagineerde Kunstwerken</h2>
+
+  <div class="artwork-grid">
+    <div *ngFor="let artwork of artworks" class="artwork-card">
+      <img [src]="artwork.imagePath" alt="{{ artwork.title }}" class="artwork-image" />
+      <div class="artwork-content">
+        <h3>{{ artwork.title }}</h3>
+        <p>{{ artwork.description }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align: center; margin-top: 1rem;">
+    <button (click)="prevPage()" [disabled]="currentPage === 0">Vorige</button>
+    <button (click)="nextPage()" [disabled]="currentPage + 1 >= totalPages">Volgende</button>
+    <p>Pagina {{ currentPage + 1 }} van {{ totalPages }}</p>
+  </div>
+</div>

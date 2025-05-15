@@ -4,7 +4,7 @@ import {ArtworkListComponent} from './components/artwork-list/artwork-list.compo
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ArtworkListComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   standalone: true,
   styleUrl: './app.component.css'
