@@ -18,6 +18,12 @@ export const routes: Routes = [
         loadComponent: () =>
           import('./components/lazy-artwork-list/lazy-artwork-list.component')
             .then(m => m.LazyArtworkListComponent)
+      },
+      {
+        path: 'lazy-image-list',
+        loadComponent: () =>
+          import('./components/lazy-image-artwork-list/lazy-image-artwork-list.component')
+            .then(m => m.LazyImageArtworkListComponent)
       }
     ]
   }

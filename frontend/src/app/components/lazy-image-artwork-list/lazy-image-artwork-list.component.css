@@ -1,0 +1,31 @@
+.artwork-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.artwork-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.artwork-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 4px;
+}
+
+.artwork-content {
+  margin-top: 0.5rem;
+  text-align: center;
+}
