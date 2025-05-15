@@ -1,0 +1,11 @@
+<h2 style="text-align: center;">Lazy Loaded Kunstwerken</h2>
+
+<div class="artwork-grid">
+  <div *ngFor="let artwork of artworks" class="artwork-card">
+    <img [src]="artwork.imagePath" alt="{{ artwork.title }}" class="artwork-image" />
+    <div class="artwork-content">
+      <h3>{{ artwork.title }}</h3>
+      <p>{{ artwork.description }}</p>
+    </div>
+  </div>
+</div>
