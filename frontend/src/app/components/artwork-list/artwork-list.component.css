@@ -1,0 +1,26 @@
+.artwork-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* max 4 kolommen */
+  gap: 1rem;
+  justify-items: center;
+  max-width: 1200px; /* optioneel: voorkomt dat het over het hele scherm uitrekt */
+  margin: 0 auto;    /* centreert het geheel */
+}
+
+.artwork-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background-color: #fff;
+}
+
+.artwork-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.artwork-content {
+  margin-top: 0.5rem;
+}
