@@ -4,6 +4,7 @@ import be.poc.backend.domain.Artwork;
 import be.poc.backend.domain.ArtworkRequest;
 import be.poc.backend.services.IArtworkService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -24,5 +25,11 @@ public class ArtworkController {
     @PostMapping("/add")
     public ResponseEntity<Artwork> addArtwork(@RequestBody ArtworkRequest artworkRequest){
         return new ResponseEntity<>(artWorkService.AddArtwork(artworkRequest), HttpStatus.CREATED);
+    }
+
+    @GetMapping("/page")
+    public Page<Artwork> getArtworks(@RequestParam(defaultValue = "0") int page,
+                                     @RequestParam(defaultValue = "10") int size) {
+        return artWorkService.getAllArtworksPaginated(page, size);
     }
 }
